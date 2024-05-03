@@ -10,3 +10,9 @@ In order to run the example server with docker compose, use this:
 ```
 docker-compose up --build
 ```
+
+swagger url
+
+```
+http://127.0.0.1/docs
+```
