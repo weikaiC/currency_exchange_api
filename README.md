@@ -1,1 +1,12 @@
-# currency_exchange_api
+Build and run the Docker image locally, as follows:
+
+```
+docker build -t asiayo-api .
+docker run -d -p 8080:80 asiayo-api
+```
+
+In order to run the example server with docker compose, use this:
+
+```
+docker-compose up --build
+```
