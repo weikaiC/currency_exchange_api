@@ -14,5 +14,5 @@ docker-compose up --build
 swagger url
 
 ```
-http://127.0.0.1/docs
+http://127.0.0.1:80/docs
 ```
