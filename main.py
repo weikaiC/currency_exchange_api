@@ -51,10 +51,19 @@ class CurrencyExchangeService:
     
     def __call__(self, source:str, target:str, amount:str):
         source_value: dict = self.dict_value.get(source)
-
+        
         try:
-            amount = int(amount.replace(',', ''))
+            amount = amount.replace(',', '')
 
+            # eval() 用来執行一個字串表達式，並返回表達式的值。
+            if type(eval(amount)) == int:
+                
+                amount = int(amount)
+            
+            elif type(eval(amount)) == float:
+                
+                amount = float(amount)
+        
         except:
             raise HTTPException(detail="金額有誤", status_code=HTTP_400_BAD_REQUEST)
 
